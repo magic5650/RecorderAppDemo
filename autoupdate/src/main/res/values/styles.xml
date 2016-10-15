@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/BaseTheme">
+        <item name="colorAccent">@color/color_material_light</item>
+    </style>
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_toolbar</item>
+        <item name="colorPrimaryDark">@color/color_toolbar</item>
+    </style>
+    <style name="Theme.System.Alert"  parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="android:gravity">start</item>
+    </style>
+</resources>

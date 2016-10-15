@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recorder_list"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_height="?android:attr/listPreferredItemHeight">
+    <TextView android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+    <ImageView android:id="@+id/icon"
+        android:contentDescription="@string/recorder_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_vertical|start"
+        android:gravity="center"
+        android:padding="4dp"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="start"
+                android:gravity="bottom|start"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:ellipsize="marquee"
+                android:singleLine ="true" />
+            <TextView android:id="@+id/often"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="end"
+                android:gravity="bottom|start"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/info"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_gravity="start"
+                android:gravity="top|start"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="marquee"
+                android:singleLine ="true" />
+            <TextView android:id="@+id/create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="end"
+                android:gravity="top|end"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_vertical|end"
+        android:gravity="center"
+        android:contentDescription="@string/more_action"
+        android:padding="8dp"/>
+</LinearLayout>

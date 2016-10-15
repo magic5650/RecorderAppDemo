@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:id="@+id/help_dialog"
+    android:divider="@drawable/dialog_divider"
+    android:showDividers="middle"
+    android:theme="@style/AlertDialog.AppCompat"
+    android:weightSum="1">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:textSize="24dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:text="给最爱的人"
+        android:textColor="@color/text_color" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loveImage"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="24dp"
+        android:text="返回"
+        android:textColor="@color/text_color" />
+</LinearLayout>

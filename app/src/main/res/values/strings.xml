@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">诗宁</string>
+
+    <string name="more_action">更多</string>
+    <string name="more_record">更多录音</string>
+    <string name="menu_import_his_recorder">导入录音</string>
+    <string name="menu_help">帮助</string>
+    <string name="menu_update">更新</string>
+    <string name="search_bar">搜索</string>
+    <string name="submit_area">菜单</string>
+
+    <string name="title_activity_media_play">MediaPlayActivity</string>
+
+    <string name="later">稍后</string>
+    <string name="update_now">更新</string>
+    <string name="confirm">确定</string>
+    <string name="back">返回</string>
+
+    <string name="recorder_icon">录音图标</string>
+
+    <string name="delete_recorder">删除录音</string>
+    <string name="modify_recorder_name">修改名称</string>
+    <string name="modify_recorder_info">修改备注</string>
+
+    <string name="share_text">分享</string>
+    <string name="share_to_wechat_friend">发送给朋友</string>
+    <string name="share_to_wechat_circle">发送到朋友圈</string>
+    <string name="share_to_wechat_collect">添加到微信收藏</string>
+    <string name="share_to_email">电子邮件</string>
+    <string name="share_to_message">信息</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delRecorder"
+        android:title="@string/delete_recorder" />
+    <item
+        android:id="@+id/modifyName"
+        android:title="@string/modify_recorder_name" />
+    <item
+        android:id="@+id/modifyInfo"
+        android:title="@string/modify_recorder_info" />
+</menu>
