@@ -77,6 +77,7 @@ class CheckUpdateTask extends AsyncTask<Void, Void, String> {
                     showDialog(mContext, updateMessage, apkUrl);
                 }
             } else if (mShowProgressDialog) {
+                Log.d(Constants.TAG,"已是最新版本");
                 Toast.makeText(mContext, mContext.getString(R.string.android_auto_update_toast_no_new_update), Toast.LENGTH_SHORT).show();
             }
 
