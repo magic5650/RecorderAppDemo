@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId 'com.magicrecoder.recoderapp'
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 14
+        versionName "14.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles += file('proguard-android.txt')
+            proguardFiles += file('proguard-rules.pro')
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def apkFile = new File(
+                        output.outputFile.getParent(),
+                        "Recorderapp_v${variant.versionName}_${releaseTime()}.apk")
+                output.outputFile = apkFile
+            }
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+    productFlavors {
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.1.1'
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    compile 'org.greenrobot:greendao:3.1.1'
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile 'com.google.android.gms:play-services-appindexing:9.4.0'
+    compile files('libs/libammsdk.jar')
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile project(':autoupdate')
+}
+
+def releaseTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
